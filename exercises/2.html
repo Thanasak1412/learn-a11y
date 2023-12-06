@@ -10,32 +10,42 @@
   <body>
     <header>
       <ul>
-        <li>
+        <li aria-label="back button to go to the index or home page">
           <a href="../accessible-html/index.html">&larr; Back</a>
         </li>
       </ul>
     </header>
-    <div id="container">
+    <div id="container" aria-label="main content of a page">
       <h1>Exercise 2</h1>
       <ol>
-        <li>
+        <li aria-label="link to download the code for this exercise">
           Download the code for
           <a href="https://github.com/jkup/learn-a11y">this repo</a>.
         </li>
-        <li>Open `exercises/2.html</li>
-        <li>
+        <li aria-label="suggestion one for this exercise" tabindex="0">
+          Open `exercises/2.html
+        </li>
+        <li
+          aria-label="main or second suggestion for this exercise"
+          tabindex="0"
+        >
           Find and fix as many accessibility problems as you can in the code
           below!
         </li>
       </ol>
       <form>
-        <p>First Name:</p>
-        <input type="text" />
-        <p>Last Name:</p>
-        <input type="text" />
-        <div class="button">Submit</div>
+        <input id="firstname" type="text" />
+        <label for="firstname">First name</label>
+        <input id="lastname" type="text" />
+        <label for="lastname">Last name</label>
+        <button class="button" aria-label="click to submit input users form">
+          Submit
+        </button>
       </form>
-      <img src="../static/kitten.jpeg" />
+      <img
+        src="../static/kitten.jpeg"
+        alt="This is an kitten image, which doesn't about this page"
+      />
     </div>
   </body>
 </html>
